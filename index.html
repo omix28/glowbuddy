@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlowBuddy</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #181c24;
       color: #e2e8f0;
-      padding: 40px 0;
+      padding: 40px 20px;
+      margin: 0;
       text-align: center;
     }
 
@@ -17,6 +19,7 @@
       padding: 24px;
       margin: 0 auto 32px;
       max-width: 600px;
+      width: 100%;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
@@ -36,17 +39,18 @@
     }
 
     h1 {
-      margin-bottom: 32px;
-      font-size: 2rem;
+      margin-bottom: 24px;
+      font-size: 1.6rem;
       color: #f7fafc;
       font-weight: 600;
       letter-spacing: 0.5px;
     }
 
     .btn {
-      margin: 14px;
-      padding: 16px 44px;
-      font-size: 1.1rem;
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 32px;
+      font-size: 1rem;
       border: none;
       border-radius: 12px;
       background: linear-gradient(90deg, #232b3a 0%, #3a4253 100%);
@@ -55,16 +59,13 @@
       font-weight: 500;
       letter-spacing: 0.3px;
       transition: all 0.2s ease-in-out;
+      text-decoration: none;
     }
 
     .btn:hover {
       transform: scale(1.05);
       color: #fff176;
       background: linear-gradient(90deg, #3a4253 0%, #232b3a 100%);
-    }
-
-    a {
-      text-decoration: none;
     }
 
     @keyframes glowFadeIn {
@@ -79,21 +80,42 @@
         text-shadow: 0 0 6px #ffe082, 0 0 12px #ffe08240;
       }
     }
+
+    /* Responsive styles */
+    @media (max-width: 480px) {
+      .btn {
+        display: block;
+        width: 90%;
+        margin: 12px auto;
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .welcome-card h2 {
+        font-size: 1.5rem;
+      }
+
+      .welcome-card p {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="welcome-card">
     <h2>GlowBuddy 🧸</h2>
-    <p>Welcome to GlowBuddy!
-🧴✨ This is a college project that helps you find the right skincare products based on your skin type.</p>
+    <p>Welcome to GlowBuddy! <br> 🧴✨ This is a college project that helps you find the right skincare products based on your skin type.</p>
   </div>
 
   <h1>Select Your Skin Type</h1>
 
-  <a href="oily.html"><button class="btn">Oily</button></a>
-  <a href="dry.html"><button class="btn">Dry</button></a>
-  <a href="combination.html"><button class="btn">Combination</button></a>
+  <a class="btn" href="oily.html">Oily</a>
+  <a class="btn" href="dry.html">Dry</a>
+  <a class="btn" href="combination.html">Combination</a>
 
 </body>
 </html>
